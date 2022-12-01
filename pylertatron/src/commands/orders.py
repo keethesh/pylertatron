@@ -1,7 +1,7 @@
-from alertatron import AlertatronFunction
+from pylertatron import Command
 
 
-class MarketOrder(AlertatronFunction):
+class MarketOrder(Command):
     func_name = "market"
 
     def __new__(cls, side="buy", amount="0", position=None, reduceOnly=False):
@@ -15,7 +15,7 @@ class MarketOrder(AlertatronFunction):
         return cls.format(MarketOrder.func_name, data)
 
 
-class Cancel(AlertatronFunction):
+class Cancel(Command):
     func_name = "cancel"
 
     def __new__(cls, which, tag=None):
@@ -29,7 +29,7 @@ class Cancel(AlertatronFunction):
         return cls.format(Cancel.func_name, data)
 
 
-class GridOrder(AlertatronFunction):
+class GridOrder(Command):
     func_name = "grid"
 
     def __new__(
@@ -57,7 +57,7 @@ class GridOrder(AlertatronFunction):
         return cls.format(GridOrder.func_name, data)
 
 
-class StopOrder(AlertatronFunction):
+class StopOrder(Command):
     func_name = "stopOrder"
 
     def __new__(
@@ -87,7 +87,7 @@ class StopOrder(AlertatronFunction):
         return cls.format(StopOrder.func_name, data)
 
 
-class IcebergOrder(AlertatronFunction):
+class IcebergOrder(Command):
     func_name = "iceberg"
 
     def __new__(
@@ -116,7 +116,7 @@ class IcebergOrder(AlertatronFunction):
         return cls.format(IcebergOrder.func_name, data)
 
 
-class LimitOrder(AlertatronFunction):
+class LimitOrder(Command):
     func_name = "limit"
 
     def __new__(
@@ -144,7 +144,7 @@ class LimitOrder(AlertatronFunction):
         return cls.format(LimitOrder.func_name, data)
 
 
-class MarketMakerOrder(AlertatronFunction):
+class MarketMakerOrder(Command):
     func_name = "marketMaker"
 
     def __new__(
@@ -180,7 +180,7 @@ class MarketMakerOrder(AlertatronFunction):
         return cls.format(MarketMakerOrder.func_name, data)
 
 
-class OneCancelsOtherOrder(AlertatronFunction):
+class OneCancelsOtherOrder(Command):
     func_name = "oneCancelsOther"
 
     def __new__(cls, which, tag=None):
@@ -190,7 +190,7 @@ class OneCancelsOtherOrder(AlertatronFunction):
         return cls.format(OneCancelsOtherOrder.func_name, data)
 
 
-class PingPongOrder(AlertatronFunction):
+class PingPongOrder(Command):
     func_name = "pingPong"
 
     def __new__(
@@ -226,7 +226,7 @@ class PingPongOrder(AlertatronFunction):
         return cls.format(PingPongOrder.func_name, data)
 
 
-class ScaledOrder(AlertatronFunction):
+class ScaledOrder(Command):
     func_name = "scaled"
 
     def __new__(
@@ -267,7 +267,7 @@ class ScaledOrder(AlertatronFunction):
         return cls.format(ScaledOrder.func_name, data)
 
 
-class StopOrTakeProfitOrder(AlertatronFunction):
+class StopOrTakeProfitOrder(Command):
     func_name = "stopOrTakeProfit"
 
     def __new__(
@@ -285,7 +285,7 @@ class StopOrTakeProfitOrder(AlertatronFunction):
         return cls.format(StopOrTakeProfitOrder.func_name, data)
 
 
-class TrailingLimitOrder(AlertatronFunction):
+class TrailingLimitOrder(Command):
     func_name = "trailingLimit"
 
     def __new__(
@@ -324,7 +324,7 @@ class TrailingLimitOrder(AlertatronFunction):
         return cls.format(TrailingLimitOrder.func_name, data)
 
 
-class TrailingStopOrder(AlertatronFunction):
+class TrailingStopOrder(Command):
     func_name = "trailingStop"
 
     def __new__(
@@ -362,7 +362,7 @@ class TrailingStopOrder(AlertatronFunction):
         return cls.format(TrailingStopOrder.func_name, data)
 
 
-class TrailingTakeProfitOrder(AlertatronFunction):
+class TrailingTakeProfitOrder(Command):
     func_name = "trailingTakeProfit"
 
     def __new__(
@@ -402,7 +402,7 @@ class TrailingTakeProfitOrder(AlertatronFunction):
         return cls.format(TrailingTakeProfitOrder.func_name, data)
 
 
-class TwapOrder(AlertatronFunction):
+class TwapOrder(Command):
     func_name = "twap"
 
     def __new__(
@@ -429,7 +429,7 @@ class TwapOrder(AlertatronFunction):
         return cls.format(TwapOrder.func_name, data)
 
 
-class WaitingLimitOrder(AlertatronFunction):
+class WaitingLimitOrder(Command):
     func_name = "waitingLimit"
 
     def __new__(

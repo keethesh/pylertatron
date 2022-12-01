@@ -1,6 +1,6 @@
 from httpx import AsyncClient
 
-from alertatron import Alert, AlertatronFunction
+from pylertatron import Alert, Command
 
 
 class Alertatron:
@@ -10,7 +10,7 @@ class Alertatron:
         self.balance_ratio: float = balance_ratio
         self.api_key_name: str = api_key_name
 
-    async def send_alert(self, symbol: str, commands: list[AlertatronFunction], tags: list[str] = None):
+    async def send_alert(self, symbol: str, commands: list[Command], tags: list[str] = None):
         if tags is None:
             tags = ["bot"]
         alert = Alert(self.api_key_name, symbol, commands, tags)

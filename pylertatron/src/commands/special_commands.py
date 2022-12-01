@@ -1,4 +1,4 @@
-from alertatron import AlertatronFunction
+from pylertatron import Command
 
 
 class Comment:
@@ -11,14 +11,14 @@ class Space:
         return "\n"
 
 
-class Balance(AlertatronFunction):
+class Balance(Command):
     func_name = "balance"
 
     def __new__(cls):
         return "balance();"
 
 
-class Continue(AlertatronFunction):
+class Continue(Command):
     func_name = "continue"
 
     def __new__(cls, _if, value=None):
@@ -28,7 +28,7 @@ class Continue(AlertatronFunction):
         return cls.format(Continue.func_name, data)
 
 
-class DynamicTakeProfit(AlertatronFunction):
+class DynamicTakeProfit(Command):
     func_name = "dynamicTakeProfit"
 
     def __new__(
@@ -53,7 +53,7 @@ class DynamicTakeProfit(AlertatronFunction):
         return cls.format(DynamicTakeProfit.func_name, data)
 
 
-class ExchangeSettings(AlertatronFunction):
+class ExchangeSettings(Command):
     func_name = "exchangeSettings"
 
     def __new__(cls, leverage=None, max_order_size=None):
@@ -67,7 +67,7 @@ class ExchangeSettings(AlertatronFunction):
         return cls.format(ExchangeSettings.func_name, data)
 
 
-class Stop(AlertatronFunction):
+class Stop(Command):
     func_name = "stop"
 
     def __new__(cls, _if, value=None):
@@ -77,7 +77,7 @@ class Stop(AlertatronFunction):
         return cls.format(Stop.func_name, data)
 
 
-class Wait(AlertatronFunction):
+class Wait(Command):
     func_name = "wait"
 
     def __new__(cls, duration="60s"):
