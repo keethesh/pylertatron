@@ -1,2 +1,2 @@
-from alertatron.commands.command import *
+from alertatron.commands.alertatron_function import *
 from alertatron.alert import Alert
