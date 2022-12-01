@@ -4,10 +4,15 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "pylertatron"
+version = "1.0"
 authors = [{name = "Keethesh Mootoosamy", email = "keethesh15@Gmail.com"}]
 license = {file = "LICENSE"}
+description = "A Python wrapper for Alertatron"
+readme = "README.md"
+requires-python = ">=3.7"
 classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
 dynamic = ["version", "description"]
 
 [project.urls]
 Home = "https://github.com/keethesh/pylertatron"
+"Bug Tracker" = "https://github.com/keethesh/pylertatron/issues"
