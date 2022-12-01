@@ -19,4 +19,4 @@ class AsyncPylertatron(Pylertatron):
 
 async def create_pylertatron(webhook_url, balance_ratio, api_key_name) -> Pylertatron:
     client = AsyncClient()
-    return Pylertatron(webhook_url, balance_ratio, api_key_name, client=client)
+    return AsyncPylertatron(webhook_url, balance_ratio, api_key_name, client=client)

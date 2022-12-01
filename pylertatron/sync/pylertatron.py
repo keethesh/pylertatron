@@ -16,4 +16,4 @@ class SyncPylertatron(Pylertatron):
 
 def create_pylertatron(webhook_url, balance_ratio, api_key_name) -> Pylertatron:
     client = Client()
-    return Pylertatron(webhook_url, balance_ratio, api_key_name, client=client)
+    return SyncPylertatron(webhook_url, balance_ratio, api_key_name, client=client)
