@@ -1,4 +1,4 @@
-__all__ = ['MarketOrder', 'Cancel', 'GridOrder', 'StopOrder', 'IcebergOrder', 'LimitOrder', 'MarketMakerOrder',
+__all__ = ['Command', 'MarketOrder', 'Cancel', 'GridOrder', 'StopOrder', 'IcebergOrder', 'LimitOrder', 'MarketMakerOrder',
            'OneCancelsOtherOrder', 'PingPongOrder', 'ScaledOrder', 'StopOrTakeProfitOrder', 'TrailingLimitOrder',
            'TrailingStopOrder', 'TrailingTakeProfitOrder', 'TwapOrder', 'WaitingLimitOrder', 'Comment', 'Space',
            'Balance', 'Continue', 'DynamicTakeProfit', 'ExchangeSettings', 'Stop', 'Wait']
