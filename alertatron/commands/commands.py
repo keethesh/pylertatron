@@ -1,4 +1,4 @@
-from Alertatron import Command
+from alertatron import Command
 
 
 class Comment:
