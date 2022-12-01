@@ -1,6 +1,6 @@
 from .command import Command
 
-
+__all__ = ['Comment', 'Space', 'Balance', 'Continue', 'DynamicTakeProfit', 'ExchangeSettings', 'Stop', 'Wait']
 class Comment:
     def __new__(cls, comment):
         return f"# {comment}"
