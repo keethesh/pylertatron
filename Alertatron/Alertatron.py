@@ -1,6 +1,6 @@
 from httpx import AsyncClient
 
-from commands.Alert import Alert
+from Alertatron import Alert
 
 
 class Alertatron:
