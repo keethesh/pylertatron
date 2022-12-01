@@ -8,6 +8,7 @@ httpx = "*"
 
 [dev-packages]
 black = "*"
+flit = "*"
 
 [requires]
 python_version = "3.9"
