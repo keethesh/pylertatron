@@ -1,4 +1,4 @@
-from commands.Command import Command
+from Alertatron import Command
 
 
 class MarketOrder(Command):
