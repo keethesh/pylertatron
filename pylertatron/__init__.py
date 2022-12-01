@@ -5,5 +5,5 @@ from . import async_
 from . import sync
 from .commands import *
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __all__ = ['async_', 'sync', 'commands']
