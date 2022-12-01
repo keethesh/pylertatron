@@ -1,6 +1,8 @@
 from .command import Command
 
 __all__ = ['Comment', 'Space', 'Balance', 'Continue', 'DynamicTakeProfit', 'ExchangeSettings', 'Stop', 'Wait']
+
+
 class Comment:
     def __new__(cls, comment):
         return f"# {comment}"
@@ -32,13 +34,13 @@ class DynamicTakeProfit(Command):
     func_name = "dynamicTakeProfit"
 
     def __new__(
-        cls,
-        offset="e1%",
-        size="100%p",
-        cancelOtherOnFill=None,
-        tag=None,
-        postOnly=True,
-        reduceOnly=True,
+            cls,
+            offset="e1%",
+            size="100%p",
+            cancelOtherOnFill=None,
+            tag=None,
+            postOnly=True,
+            reduceOnly=True,
     ):
         data = {
             "offset": offset,

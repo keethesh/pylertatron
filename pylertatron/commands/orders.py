@@ -1,6 +1,5 @@
 from .command import Command
 
-# A list of all classes in this module:
 __all__ = ['MarketOrder', 'Cancel', 'GridOrder', 'StopOrder', 'IcebergOrder', 'LimitOrder',
            'MarketMakerOrder', 'OneCancelsOtherOrder', 'PingPongOrder', 'ScaledOrder', 'StopOrTakeProfitOrder',
            'TrailingLimitOrder', 'TrailingStopOrder', 'TrailingTakeProfitOrder', 'TwapOrder', 'WaitingLimitOrder']
