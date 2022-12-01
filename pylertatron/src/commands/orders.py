@@ -1,4 +1,4 @@
-from pylertatron import Command
+from .command import Command
 
 
 class MarketOrder(Command):
