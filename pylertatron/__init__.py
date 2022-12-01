@@ -1,9 +1,10 @@
 """
-Please refer to the documentation provided in the README.md,
-which can be found at the Github repo: https://github.com/keethesh/pylertratron
+Pylertatron is a Python library for sending alerts to Alertatron.
 """
+from .alert import Alert
+from .async_ import *
+from .commands import *
+from .sync import *
 
-__version__ = '0.1'
-
-from .src.alert import Alert
-from .src.commands.command import Command
+__version__ = "1.0.2"
+__all__ = ['async_', 'sync', 'commands', 'alert']

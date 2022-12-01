@@ -1,7 +1,7 @@
 
 # Pylertatron
 
-A simple Alertatron wrapper for Python
+A simple Pylertatron wrapper for Python
 ## Installation
 
 Install pylertatron with PIP:
@@ -12,9 +12,9 @@ pip install pylertatron
 ## Usage
 
 ```py
-from alertatron.sync import Alertatron, Alert
+from alertatron.sync import Pylertatron, Alert
 from alertatron.commands import *
 
-al = Alertatron(webhook_url="https://webhook.com", 
+al = Pylertatron(webhook_url="https://webhook.com", 
 balance_ratio=0.5, api_key_name="ApiKey", ")
 ```

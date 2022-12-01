@@ -1,9 +1,10 @@
 from httpx import AsyncClient
 
-from pylertatron import Alert, Command
+from ..alert import Alert
+from ..commands.command import Command
 
 
-class Alertatron:
+class Pylertatron:
     def __init__(self, webhook_url, balance_ratio, api_key_name, client):
         self.webhook_url: str = webhook_url
         self.client: AsyncClient = client
@@ -17,6 +18,6 @@ class Alertatron:
         await self.client.post(self.webhook_url, data=alert)
 
 
-async def create_alertatron(webhook_url, balance_ratio, api_key_name) -> Alertatron:
+async def create_pylertatron(webhook_url, balance_ratio, api_key_name) -> Pylertatron:
     client = AsyncClient()
-    return Alertatron(webhook_url, balance_ratio, api_key_name, client=client)
+    return Pylertatron(webhook_url, balance_ratio, api_key_name, client=client)
