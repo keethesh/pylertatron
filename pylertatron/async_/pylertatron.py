@@ -15,9 +15,9 @@ class AsyncPylertatron(Pylertatron):
     async def send_alert(self, symbol: str, commands: list[Command], tags: list[str] = None):
         alert = self.generate_alert(symbol, commands, tags)
         data = {"message": alert}
-        await self.client.post(self.webhook_url, data=data)
+        await self.client.post(self.webhook_url, json=data)
 
 
-async def create_pylertatron(webhook_url, balance_ratio, api_key_name) -> Pylertatron:
+async def create_pylertatron(webhook_url, balance_ratio, api_key_name) -> AsyncPylertatron:
     client = AsyncClient()
     return AsyncPylertatron(webhook_url, balance_ratio, api_key_name, client=client)
