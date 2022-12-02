@@ -1,3 +1,3 @@
 from .pylertatron import *
 
-__all__ = ['Pylertatron', 'create_pylertatron']
+__all__ = ['AsyncPylertatron', 'create_pylertatron']
