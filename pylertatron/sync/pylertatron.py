@@ -11,7 +11,8 @@ class SyncPylertatron(Pylertatron):
 
     def send_alert(self, symbol: str, commands: list[Command], tags: list[str] = None):
         alert = self.generate_alert(symbol, commands, tags)
-        self.client.post(self.webhook_url, data=alert)
+        data = {"message": alert}
+        self.client.post(self.webhook_url, data=data)
 
 
 def create_pylertatron(webhook_url, balance_ratio, api_key_name) -> Pylertatron:
